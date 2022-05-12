@@ -11,6 +11,10 @@ public class Main {
     b1.setDefenceType("Magical");
         System.out.println(b1.getHealth() + " " + b1.getDamage() + " " + b1.getDefenceType());
     createHeroes();
+        for (int i = 0; i < createHeroes().length; i++) {
+            System.out.println(createHeroes()[i].getHealth() + " " + createHeroes()[i].getDamage() + " "
+                    + createHeroes()[i].getSuperpower());
+        }
     }
 
     public static Hero[] createHeroes(){
@@ -18,9 +22,6 @@ public class Main {
         Hero h2 = new Hero(350, 35, "Telekinesis");
         Hero h3 = new Hero(300, 40, "Invisibility");
         Hero[] createdHeroes = {h1, h2, h3};
-        for (int i = 0; i < createdHeroes.length; i++) {
-            System.out.println(createdHeroes[i].getHealth() + " " + createdHeroes[i].getDamage() + " " + createdHeroes[i].getSuperpower());
-        }
         return createdHeroes;
     }
 }
